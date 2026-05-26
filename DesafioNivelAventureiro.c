@@ -4,7 +4,7 @@
 
 int main() {
 
-
+//
     char estado [50];
     char codigoDaCarta [50];
     char nomeDaCidade1 [50];
