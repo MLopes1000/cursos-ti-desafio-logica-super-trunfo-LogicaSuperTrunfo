@@ -4,7 +4,7 @@
 
 int main() {
 
-//
+
     char estado1 [50];
     char estado2 [50];
     char codigoDaCarta1 [50];
@@ -91,10 +91,10 @@ int main() {
     printf("\n");
 
 
-    int atributo1, atributo2;
+   int atributo1, atributo2;
    const char *nomeAtributo1;
    const char *nomeAtributo2;
-    float resultado1A, resultado2A, 
+   float resultado1A, resultado2A, 
           resultado1B, resultado2B;
 
     
@@ -108,18 +108,39 @@ printf("4. Pib Per Capita\n");
 printf("5. Área\n");
 printf("6. Densidade Populacional\n");
 printf("\n");
+
 printf("Escolha o primeiro atributo.\n");
-printf("Atributo: ");
+printf("Atributo:  ");
 scanf("%d", &atributo1);
+
 printf("\n");
+
+if (atributo1 < 1 || atributo1 > 6)
+{
+    printf("Opção inválida!\n\n");
+    return 1;
+}
+
+
 printf("Escolha o segundo atributo.\n");
 printf("Atributo: ");
 scanf("%d", &atributo2);
+
+printf("\n");
+
+if (atributo2 < 1 || atributo2 > 6)
+{
+    printf("Opção inválida!\n\n");
+    return 1;
+}
+
 printf("\n");
 
 if (atributo1 == atributo2)
 {
-  printf("Os atributos devem ser diferentes. Tente novamente!\n");
+  printf("Os atributos devem ser diferentes. Tente novamente!\n\n");
+  return 1;
+
 }else{
 
 
@@ -207,7 +228,7 @@ if (atributo1 == atributo2)
   
   default:
     printf("Opção inválida\n");
-    return 1;;
+    return 1;
   }
 
 }
@@ -234,11 +255,11 @@ printf("\n");
 
 if (somaCarta1 > somaCarta2)
 {
-    printf("Carta 1 %s: %.2f - Carta 1 venceu!\n", estado1, somaCarta1);
+    printf("Carta 1 %s: %.2f - Carta 1 venceu!\n\n", estado1, somaCarta1);
 }
 else if (somaCarta2 > somaCarta1)
 {
-    printf("Carta 2 %s: %.2f - Carta 2 venceu!\n", estado2, somaCarta2);
+    printf("Carta 2 %s: %.2f - Carta 2 venceu!\n\n", estado2, somaCarta2);
 }
 else
 {
